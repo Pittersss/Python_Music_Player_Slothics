@@ -11,7 +11,7 @@ for _, _, arquivo in os.walk('musics/'):
 
 layout = [
     [sg.Push(),sg.Image('images/capa_album.png'),sg.Push()],
-    [sg.Text(musics[0], key="-TEXT-"), sg.Push()],
+    [sg.Text(musics[0][:-4], key="-TEXT-"), sg.Push()],
     [sg.Push(),sg.Button('', image_data=button.button_left_next, key='-PREVIOUS-', button_color=(sg.theme_background_color(), sg.theme_background_color()), border_width=0),
     sg.Button('', image_data=button.button_play, key='-PLAY-', button_color=(sg.theme_background_color(), sg.theme_background_color()),border_width=0),
     sg.Button('', image_data=button.button_rigth_next, key='-NEXT-', button_color=(sg.theme_background_color(), sg.theme_background_color()), border_width=0), sg.Push()]
@@ -31,26 +31,26 @@ while True:
     if event == '-NEXT-':
         if i == (len(musics)-1):
             i = 0
-            window.Element("-TEXT-").update(f'{musics[i]}')
+            window.Element("-TEXT-").update(f'{musics[i][:-4]}')
             pygame.mixer.music.stop()
             pygame.mixer.music.load(f'musics/{musics[i]}')
             pygame.mixer.music.play(-1)
         else:
             i += 1
-            window.Element("-TEXT-").update(f'{musics[i]}')
+            window.Element("-TEXT-").update(f'{musics[i][:-4]}')
             pygame.mixer.music.stop()
             pygame.mixer.music.load(f'musics/{musics[i]}')
             pygame.mixer.music.play(-1)
     if event == '-PREVIOUS-':
         if i == 0:
             i = len(musics)-1          
-            window.Element("-TEXT-").update(f'{musics[i]}')
+            window.Element("-TEXT-").update(f'{musics[i][:-4]}')
             pygame.mixer.music.stop()
             pygame.mixer.music.load(f'musics/{musics[i]}')
             pygame.mixer.music.play(-1)
         else:
             i -= 1
-            window.Element("-TEXT-").update(f'{musics[i]}')
+            window.Element("-TEXT-").update(f'{musics[i][:-4]}')
             pygame.mixer.music.stop()
             pygame.mixer.music.load(f'musics/{musics[i]}')
             pygame.mixer.music.play(-1)
