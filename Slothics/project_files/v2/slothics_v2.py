@@ -9,9 +9,11 @@ for _, _, arquivo in os.walk('musics/'):
     musics = arquivo
 
 
+
+
 layout = [
     [sg.Push(),sg.Image('images/capa_album.png'),sg.Push()],
-    [sg.Text(musics[0][:-4], key="-TEXT-"), sg.Push()],
+    [sg.Text("a", key="-TEXT-"), sg.Push()],
     [sg.Push(),sg.Button('', image_data=button.button_left_next, key='-PREVIOUS-', button_color=(sg.theme_background_color(), sg.theme_background_color()), border_width=0),
     sg.Button('', image_data=button.button_play, key='-PLAY-', button_color=(sg.theme_background_color(), sg.theme_background_color()),border_width=0),
     sg.Button('', image_data=button.button_rigth_next, key='-NEXT-', button_color=(sg.theme_background_color(), sg.theme_background_color()), border_width=0), sg.Push()]
