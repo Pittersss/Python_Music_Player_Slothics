@@ -20,7 +20,10 @@ https://github.com/Pittersss/Python_Music_Player_Slothics/assets/70235190/b14444
 ### Version 3
 In this final stage, my objective was to polish mechanics already applied. One of them was the separation of the song title and its author, which helped me learn about string manipulation. This way, in a database that receives real songs, a standardization in the song title would be requested to adapt to the algorithm. A bug has been recognized. In version two, if my current song was paused and the user went to the next one, the song would start automatically, but this wasn't right and caused a bottleneck in the Play and Pause logic also allocated in this current version. The image was updated through the use of conditionals linked to possible events on the pages. I personally wouldn't like to have an extra button just to pause the music and I put it that way.
 
-##Conclusion
+https://github.com/Pittersss/Python_Music_Player_Slothics/assets/70235190/c709d51e-40c8-4a43-9147-018708a5d34d
+
+## Conclusion
+
 This project was very useful for learning about new development tools with Python. It also gave me good practice in basic language concepts.
 
 
